@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
     purge: [
@@ -13,13 +14,23 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
+        colors: {
+            // Build your palette here
+            transparent: 'transparent',
+            menu: '#2c3e50',
+            gray: colors.trueGray,
+            red: colors.red,
+            blue: colors.lightBlue,
+            yellow: colors.amber,
+            white: colors.white
+        }
     },
 
     variants: {
         extend: {
-            opacity: ['disabled'],
-        },
+            opacity: ['disabled']
+        }
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
 };
