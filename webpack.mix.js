@@ -16,7 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
         require('autoprefixer'),
-    ]);
+    ])
+    .browserSync('https://gameslist.test');
 
 if (mix.inProduction()) {
     mix.version();
