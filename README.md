@@ -71,5 +71,11 @@ La aplicación puede ser desplaga de la forma que más acomode, para este caso f
 
 4. Ejecutamos la migración
     ```
-    php artisan migrate
+    php artisan migrate --seed
+    ```
+
+5. Iniciamos Sesión
+    ```
+    Email: matias@icodeart.cl
+    Pass: admin
     ```

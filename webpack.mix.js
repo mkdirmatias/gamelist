@@ -19,6 +19,4 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .browserSync('https://gameslist.test');
 
-if (mix.inProduction()) {
-    mix.version();
-}
+mix.version();

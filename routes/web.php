@@ -1,22 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GamesController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Página de inicio
+Route::get('/', [GamesController::class, 'index'])->name('dashboard');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Eliminar juego
+Route::get('/eliminar/{games}', [GamesController::class, 'destroy'])
+    ->where('games','[0-9]+')
+    ->name('game.delete');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Agregar juego
+Route::post('/agregar/', [GamesController::class, 'store'])->name('game.add');
+
+// Editar juego
+Route::post('/editar/{games}', [GamesController::class, 'update'])
+    ->where('games','[0-9]+')
+    ->name('game.update');

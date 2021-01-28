@@ -22,7 +22,8 @@ module.exports = {
             red: colors.red,
             blue: colors.lightBlue,
             yellow: colors.amber,
-            white: colors.white
+            white: colors.white,
+            teal: colors.teal
         }
     },
 
@@ -32,5 +33,5 @@ module.exports = {
         }
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')]
+    plugins: [require('@tailwindcss/typography')]
 };
