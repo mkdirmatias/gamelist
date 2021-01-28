@@ -79,3 +79,6 @@ La aplicación puede ser desplaga de la forma que más acomode, para este caso f
     Email: matias@icodeart.cl
     Pass: admin
     ```
+
+# Screenshot
+![app](https://i.imgur.com/ZR6GTSD.png)
