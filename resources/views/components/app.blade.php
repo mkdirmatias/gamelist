@@ -22,10 +22,14 @@
 
         <div class="min-h-screen">
             <!-- Page Content -->
-            <div class="h-screen w-full flex overflow-hidden select-none">
+            <div class="h-screen w-full flex overflow-hidden select-none" x-data="{menu:false}">
                 <x-menu></x-menu>
 
                 <main class="p-5 px-2 md:px-10 flex-1 bg-gray-100 transition duration-500 ease-in-out overflow-y-auto">
+                    <div class="mb-5 md:hidden cursor-pointer" @click="{menu = true}">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+
                     <x-topbar>{{$title}}</x-topbar>
 
                     {{ $slot }}

@@ -17,7 +17,7 @@
                     ></path>
                 </svg>
             </span>
-            <input class="w-96 rounded-md outline-none pl-10 border-0 p-2 " type="text" placeholder="Buscar Juego..." wire:model="busqueda">
+            <input class="w-full md:w-96 rounded-md outline-none pl-10 border-0 p-2 " type="text" placeholder="Buscar Juego..." wire:model="busqueda">
         </div>
 
 
