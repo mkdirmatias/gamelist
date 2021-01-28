@@ -93,7 +93,7 @@
                             </td>
 
                             <td class="px-6 py-4  border-b border-gray-200 text-sm font-medium">
-                                <div class="flex">
+                                <div class="flex space-x-1">
                                     <div class="bg-gray-200 p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="ver = true">
                                         <i class="fas fa-eye"></i>
                                     </div>
