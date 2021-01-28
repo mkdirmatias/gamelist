@@ -127,6 +127,12 @@
                                 <x-modal id='editar' titulo="Editar {{ $game->nombre_game }}">
                                     <form class="flex flex-col" action="{{ route('game.update',$game) }}" method="post">
                                         @csrf
+                                        <label for="estado" class="font-bold mt-2">Estado</label>
+                                        <select class="border p-2 px-3" name="estado" id="estado" required>
+                                            <option value="1" {{ $game->estado_game == 1 ? 'selected' : '' }}>ACTIVO</option>
+                                            <option value="0" {{ $game->estado_game == 0 ? 'selected' : '' }}>INACTIVO</option>
+                                        </select>
+                                        
                                         <label for="nombre" class="font-bold mt-2">Nombre</label>
                                         <input class="border p-2 px-3" type="text" name="nombre" value="{{ $game->nombre_game }}" required placeholder="...">
 

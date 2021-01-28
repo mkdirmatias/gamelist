@@ -91,11 +91,11 @@ class GamesController extends Controller
             // Guardar
             $this->gameRepository->save($games);
 
-            return redirect()->route('dashboard')->with('estado',['success','Juego Agregado','El juego se agregó satisfactoriamente.']);
+            return redirect()->route('dashboard')->with('estado',['success','Juego Editado','El juego se editó satisfactoriamente.']);
         }
         catch (\Throwable $th)
         {
-            return redirect()->route('dashboard')->with('estado',['success','Juego No Agregado','Si el error persiste, contacta al soporte.']);
+            return redirect()->route('dashboard')->with('estado',['success','Juego No Editado','Si el error persiste, contacta al soporte.']);
         }
     }
 
