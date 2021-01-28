@@ -41,7 +41,7 @@ En la edición se debería poder actualizar todos los datos incluyendo la imagen
     - imagen: https://winchiletragamonedas.com/public/images/games/gemmed.jpeg
 
 # Instalación
-La aplicación puede ser desplaga de la forma que más acomode, para este caso fue desarrollada en [VALET](https://laravel.com/docs/8.x/valet). Luego seguimos los siguientes pasos:
+La aplicación puede ser desplegada de la forma que más acomode, para este caso fue desarrollada en [VALET](https://laravel.com/docs/8.x/valet). Luego seguimos los siguientes pasos:
 
 1.  Clonamos el repositorio
 
