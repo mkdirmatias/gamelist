@@ -28,7 +28,8 @@ class GamesRequest extends FormRequest
             'nombre'      => ['required','max:255'],
             'link'        => ['required'],
             'imagen'      => ['required'],
-            'descripcion' => ['required']
+            'descripcion' => ['required'],
+            'estado'      => ['nullable','integer','in:1,0']
         ];
     }
 }

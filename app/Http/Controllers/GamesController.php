@@ -86,7 +86,7 @@ class GamesController extends Controller
             $games->link_game        = $request->validated()['link'];
             $games->imagen_game      = $request->validated()['imagen'];
             $games->descripcion_game = $request->validated()['descripcion'];
-            $games->estado_game      = 1;
+            $games->estado_game      = $request->validated()['estado'] ?? 0;
             
             // Guardar
             $this->gameRepository->save($games);
