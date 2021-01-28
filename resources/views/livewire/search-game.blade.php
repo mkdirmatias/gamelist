@@ -75,35 +75,36 @@
                 <tbody class="bg-white">
                     @forelse ($games as $game)
                         <tr x-data="{ver:false, imagen:false, eliminar:false, editar:false}">
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <td class="px-6 py-4  border-b border-gray-200">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10 cursor-pointer" @click="imagen = true">
                                         <img class="h-10 w-10 rounded-full" src="{{ $game->imagen_game }}" alt="">
                                     </div>
 
                                     <div class="ml-4">
-                                        <div class="text-sm leading-5 font-medium text-gray-900">{{ $game->nombre_game }}</div>
-                                        <div class="text-sm leading-5 text-gray-500"><a href="{{ $game->link_game }}" target="_blank">{{ $game->link_game }}</a></div>
+                                        <div class="text-sm font-medium text-gray-900">{{ $game->nombre_game }}</div>
+                                        <div class="text-sm text-gray-500"><a href="{{ $game->link_game }}" target="_blank">{{ $game->link_game }}</a></div>
                                     </div>
                                 </div>
                             </td>
 
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-sm leading-5 text-gray-500">
+                            <td class="px-6 py-4  border-b border-gray-200 text-sm text-gray-500">
                                 {!! $game->estado_game == '1' ? '<i class="text-teal-300 fas fa-circle"></i> Activo' : '<i class="text-red-400 fas fa-circle"></i> Inactivo' !!}
                             </td>
 
-                            <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium flex space-x-1">
+                            <td class="px-6 py-4  border-b border-gray-200 text-sm font-medium">
+                                <div class="flex">
+                                    <div class="bg-gray-200 p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="ver = true">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
                                 
-                                <div class="bg-gray-200 p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="ver = true">
-                                    <i class="fas fa-eye"></i>
-                                </div>
-                            
-                                <div class="bg-blue-400 text-white p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="editar = true">
-                                    <i class="fas fa-edit"></i>
-                                </div>
-                            
-                                <div class="bg-red-400 text-white p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="eliminar = true">
-                                    <i class="fas fa-trash-alt"></i>
+                                    <div class="bg-blue-400 text-white p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="editar = true">
+                                        <i class="fas fa-edit"></i>
+                                    </div>
+                                
+                                    <div class="bg-red-400 text-white p-2 flex items-center justify-center rounded-full h-10 w-10 cursor-pointer" @click="eliminar = true">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </div>
                                 </div>
 
                                 {{-- Modales --}}
@@ -158,7 +159,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4" class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">Sin resultados</td>
+                            <td colspan="4" class="px-6 py-4  border-b border-gray-200">Sin resultados</td>
                         </tr>
                     @endforelse
                 </tbody>
